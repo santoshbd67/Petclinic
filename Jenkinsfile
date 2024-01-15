@@ -85,7 +85,6 @@ pipeline {
                     sh "cp \$WORKSPACE/target/petclinic.war $targetDir"
                 }
             }
-        }
-      }       
+        }             
     }
 }
