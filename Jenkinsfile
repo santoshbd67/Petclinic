@@ -72,19 +72,6 @@ pipeline {
                 sh " trivy image santoshbd67/pet-clinic123:latest"
             }
         }
-       stage('Deploy to Tomcat') {
-            steps {
-                script {
-                    // Specify the target directory
-                    def targetDir = '/opt/apache-tomcat-9.0.65/webapps/'
-
-                    // Create the target directory if it doesn't exist
-                    sh "sudo mkdir -p $targetDir"
-
-                    // Copy the WAR file to the target directory
-                    sh "cp \$WORKSPACE/target/petclinic.war $targetDir"
-                }
-            }
-        }             
+                       
     }
 }
